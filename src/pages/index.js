@@ -8,7 +8,7 @@ class Home extends React.Component {
     render() {
         return(
             <>
-                <h1>My site!</h1>
+                <h1>My site!!!</h1>
                 <Search />
             </>
         )
