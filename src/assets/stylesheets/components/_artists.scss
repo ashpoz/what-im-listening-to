@@ -1,0 +1,22 @@
+.artists {
+    ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        li {
+            text-align: center;    
+            width: 100%;
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        ul {
+            li {
+                width: 200px;
+            }   
+        }
+    }
+}
