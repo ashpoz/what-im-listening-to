@@ -4,12 +4,12 @@ import Layout from '../components/layout';
 import Header from '../components/header';
 import Img from "gatsby-image";
 
-const Home = ({data}) => {
+const Artists = ({data}) => {
 
   return (
-    <Layout pageName="home">
+    <Layout pageName="artists">
       <Helmet>
-        <title>Home Page</title>
+        <title>Artists Page</title>
       </Helmet>
     <Header />
       <section className="container">
@@ -61,7 +61,7 @@ const Home = ({data}) => {
 };
 
 export const pageQuery = graphql`
-  query homePageQuery {
+  query artistsPageQuery {
     current: allSpotifyTopArtist(
       filter: { time_range: { eq: "short_term" } }
       sort: { fields: order }
@@ -113,4 +113,4 @@ export const pageQuery = graphql`
 }
 `
 
-export default Home;
+export default Artists;
