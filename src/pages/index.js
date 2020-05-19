@@ -21,7 +21,7 @@ const Home = ({data}) => {
                     console.log(edge)
                     return(
                       <li className="artist" key={edge.node.id}>
-                          <a href={edge.node.external_urls.spotify} target="_blank">
+                          <a href={edge.node.external_urls.spotify} target="_blank" rel="noopener noreferrer">
                               <div>
                                 <Img fixed={edge.node.image.localFile.childImageSharp.fixed} 
                                      objectFit="cover"
@@ -42,7 +42,7 @@ const Home = ({data}) => {
                     console.log(edge)
                     return(
                       <li className="artist" key={edge.node.id}>
-                          <a href={edge.node.external_urls.spotify} target="_blank">
+                          <a href={edge.node.external_urls.spotify} target="_blank" rel="noopener noreferrer">
                               <div>
                                 <Img fixed={edge.node.image.localFile.childImageSharp.fixed} />
                                 <p>{edge.node.name}</p>
