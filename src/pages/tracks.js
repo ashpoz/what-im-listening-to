@@ -19,7 +19,7 @@ const Tracks = ({data}) => {
                 {data.current.edges.map(edge => {
                     return(
                         <li key={edge.node.id}>
-                            <a href={edge.node.external_urls.spotify} target="_blank">
+                            <a href={edge.node.external_urls.spotify} target="_blank" rel="noopener noreferrer">
                             {edge.node.name}
                             {edge.node.artists.map((artist, i) => {
                                 if (i > 0 && i === edge.node.artists.length - 1) {
@@ -43,7 +43,7 @@ const Tracks = ({data}) => {
                 {data.allTime.edges.map(edge => {
                     return(
                       <li key={edge.node.id}>
-                          <a href={edge.node.external_urls.spotify} target="_blank">
+                          <a href={edge.node.external_urls.spotify} target="_blank" rel="noopener noreferrer">
                             {edge.node.name}
                             {edge.node.artists.map((artist, i) => {
                                 if (i > 0 && i === edge.node.artists.length - 1) {
