@@ -1,3 +1,24 @@
 .tracks {
-    
+    ul {
+        padding-left: 0;
+        list-style: none;
+        li {
+            display: flex;
+            border-top: 1px solid #718093;
+            border-bottom: 1px solid #718093;
+            a {
+                transition: all .15s ease-in-out;
+                padding: .25rem 1rem;
+                width: 100%;
+                &:hover {
+                    background-color: #718093;
+                }
+            }
+        }
+    }
+}
+
+.latest-track {
+    max-width: 600px;
+    margin: auto;
 }

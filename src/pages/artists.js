@@ -15,7 +15,7 @@ const Artists = ({data}) => {
       <section className="container">
         <div className="row">
           <div className="artists col-md-6">
-            <h2>Current</h2>
+          {/* <h3 className="artists__title">Favorite artists - <span>Current</span></h3> */}
               <ul>
                 {data.current.edges.map(edge => {
                     console.log(edge)
@@ -24,8 +24,9 @@ const Artists = ({data}) => {
                           <a href={edge.node.external_urls.spotify} target="_blank" rel="noopener noreferrer">
                               <div>
                                 <Img fixed={edge.node.image.localFile.childImageSharp.fixed} 
-                                     objectFit="cover"
-                                     objectPosition="50% 50%"/>
+                                     objectFit="fill"
+                                     objectPosition="50% 50%" 
+                                      />
                                 <p>{edge.node.name}</p>
                               </div>
                           </a>
@@ -36,7 +37,7 @@ const Artists = ({data}) => {
               </ul>
           </div>
           <div className="artists col-md-6">
-            <h2>All time</h2>
+            {/* <h3 className="artists__title">Favorite artists - <span>All time</span></h3> */}
               <ul>
                 {data.allTime.edges.map(edge => {
                     console.log(edge)
@@ -44,7 +45,10 @@ const Artists = ({data}) => {
                       <li className="artist" key={edge.node.id}>
                           <a href={edge.node.external_urls.spotify} target="_blank" rel="noopener noreferrer">
                               <div>
-                                <Img fixed={edge.node.image.localFile.childImageSharp.fixed} />
+                                <Img fixed={edge.node.image.localFile.childImageSharp.fixed} 
+                                    objectFit="fill"
+                                    objectPosition="50% 50%"
+                                     />
                                 <p>{edge.node.name}</p>
                               </div>
                           </a>
@@ -74,7 +78,7 @@ export const pageQuery = graphql`
           image {
             localFile {
               childImageSharp {
-                fixed(width: 200, height: 200) {
+                fixed(width: 150, height: 150) {
                   ...GatsbyImageSharpFixed_withWebp
                 }
               }
@@ -98,7 +102,7 @@ export const pageQuery = graphql`
           image {
             localFile {
               childImageSharp {
-                fixed(width: 200, height: 200) {
+                fixed(width: 150, height: 150) {
                   ...GatsbyImageSharpFixed_withWebp
                 }
               }
