@@ -14,7 +14,7 @@ const Tracks = ({data}) => {
       <section className="container">
         <div className="row">
           <div className="tracks col-md-6">
-            <h2>Current</h2>
+            <h2 className="tracks__title text-center padbot-2">Current favs</h2>
               <ul>
                 {data.current.edges.map(edge => {
                     return(
@@ -38,7 +38,7 @@ const Tracks = ({data}) => {
               </ul>
           </div>
           <div className="tracks col-md-6">
-            <h2>All time</h2>
+            <h2 className="tracks__title text-center padbot-2">All time favs</h2>
               <ul>
                 {data.allTime.edges.map(edge => {
                     return(

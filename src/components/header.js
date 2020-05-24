@@ -12,13 +12,13 @@ const Header = () => {
         <nav>
             <ul>
                 <li>
-                    <Link to="/">Latest</Link>
+                    <Link to="/" activeClassName="active">Current Track</Link>
                 </li>
                 <li>
-                    <Link to="/artists/">Artists</Link>
+                    <Link to="/artists/" activeClassName="active">Artists</Link>
                 </li>
                 <li>
-                    <Link to="/tracks/">Tracks</Link>
+                    <Link to="/tracks/" activeClassName="active">Songs</Link>
                 </li>
             </ul>
         </nav>

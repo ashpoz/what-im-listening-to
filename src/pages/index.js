@@ -13,20 +13,17 @@ const Home = ({data}) => {
       </Helmet>
     <Header />
       <section className="container">
-        <div className="row">
-          <div className="col-12 text-center">
-            <h3>What I'm listening to right now:</h3>
-          </div>
-          <div className="col-12">
+        <div className="row" style={{ maxWidth: "600px", margin: "auto" }}>
+          <div className="col-12 padbot-3">
                 <ul>
                   <li className="latest-track">
-                    <a href="">
+                    <a href={data.spotifyRecentTrack.track.external_urls.spotify} target="_blank">
                       <div>
+                      <h4 style={{ paddingBottom: "15px" }}>{data.spotifyRecentTrack.track.name} by {data.spotifyRecentTrack.track.artistString}</h4>
                       <Img fluid={data.spotifyRecentTrack.track.image.localFile.childImageSharp.fluid} 
                             objectFit="fill"
                             objectPosition="50% 50%"
                               />
-                        <p>{data.spotifyRecentTrack.track.name}</p>
                       </div>
                     </a>
                   </li>
