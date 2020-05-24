@@ -1,0 +1,43 @@
+// Mixins
+
+// colors
+@each $color, $hex in $brand-colors {
+    .bg-#{$color} {
+      background-color: #{$hex};
+    }
+    .#{$color}-text {
+      color: #{$hex} !important;
+    }
+  }
+  
+  // color fm
+  @function get-color($val) {
+    $color: map-get($brand-colors, $val);
+    @return $color;
+  }
+  
+  // padding
+  @for $i from 0 through 12 {
+    .padtop-#{$i} {
+      padding-top: #{$i}rem;
+    }
+    .padbot-#{$i} {
+      padding-bottom: #{$i}rem;
+    }
+    .martop-#{$i} {
+      margin-top: #{$i}rem;
+    }
+    .marbot-#{$i} {
+      margin-bottom: #{$i}rem;
+    }
+  }
+  
+  @for $i from 0 through 6 {
+    .padright-#{$i} {
+      padding-right: #{$i}rem;
+    }
+    .padleft-#{$i} {
+      padding-left: #{$i}rem;
+    }
+  }
+  

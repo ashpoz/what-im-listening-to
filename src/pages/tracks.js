@@ -27,7 +27,7 @@ const Tracks = ({data}) => {
                                 } else if (i > 0 && i !== edge.node.artists.length - 1) {
                                     return `, ${artist.name}`;
                                 } else {
-                                    return ` by ${artist.name}`;  
+                                    return ` - ${artist.name}`;  
                                 }
                             })}
                             </a>
@@ -51,7 +51,7 @@ const Tracks = ({data}) => {
                                 } else if (i > 0 && i !== edge.node.artists.length - 1) {
                                     return `, ${artist.name}`;
                                 } else {
-                                    return ` by ${artist.name}`;  
+                                    return ` - ${artist.name}`;  
                                 }
                             })}
                           </a>

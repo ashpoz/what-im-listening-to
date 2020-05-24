@@ -6,16 +6,19 @@
         padding-left: 0;
         li {
             text-align: center;    
-            width: 100%;
+            width: 50%;
             img {
                 border-radius: 50%;
             }
         }
     }
+    h2 {
+        padding-bottom: 2rem;
+    }
     @media (min-width: 768px) {
         ul {
             li {
-                width: 200px;
+                width: 175px;
             }   
         }
     }

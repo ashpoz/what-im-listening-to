@@ -1,0 +1,19 @@
+nav {
+    padding: 2rem 0;
+    ul {
+        display: flex;
+        padding-left: 0;
+        li {
+            list-style: none;
+            a {
+                padding: 1rem 2rem;
+                font-weight: bold;
+                color: get-color(accent-color);
+                transition: all .25s ease-in-out;
+                &:hover {
+                    color: get-color(accent-color2);
+                }
+            }
+        }
+    }
+}
