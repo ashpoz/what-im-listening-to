@@ -15,7 +15,7 @@ const Artists = ({data}) => {
       <section className="container">
         <div className="row">
           <div className="artists col-md-6">
-          {/* <h3 className="artists__title">Favorite artists - <span>Current</span></h3> */}
+          <h2 className="artists__title text-center padbot-2">Current favs</h2>
               <ul>
                 {data.current.edges.map(edge => {
                     console.log(edge)
@@ -37,7 +37,7 @@ const Artists = ({data}) => {
               </ul>
           </div>
           <div className="artists col-md-6">
-            {/* <h3 className="artists__title">Favorite artists - <span>All time</span></h3> */}
+            <h2 className="artists__title text-center padbot-2">All time favs</h2>
               <ul>
                 {data.allTime.edges.map(edge => {
                     console.log(edge)
